@@ -1,0 +1,773 @@
+
+
+
+
+/* nom des variables en parmètre */
+
+
+[
+    {
+        "test_num": 1,
+        "test_label": "initialiser le tableau de 42 charactères",
+        "file_name": "init_grille.c",
+        "goal": {
+            "type": "grille",  /* g */
+            "val": "{{" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}} "
+        },
+        "args": [
+            {
+                "type": "grille", /* g */
+                "val": "non défini"
+            }, 
+        ]
+    },
+    {
+        "test_num": 2,
+        "test_label": "initialiser le tableau de 42 charactères",
+        "file_name": "init_grille.c",
+        "goal": {
+            "type": "string",
+            "val": "probleme de dimensions donnez en paramètre un tableau de dimensions 6 par 7"
+        },
+        "args": [
+            {
+                "type": "tableau taille 6*7", /* g */
+                "val": "non défini"
+            },
+        ]
+    },
+    {
+        "test_num": 1,
+        "test_label": "colonne mise en paramètre",
+        "file_name": "afficher.c",
+        "goal": {
+            "type": "grille",
+            "val":  
+                               x    
+                               ^ 
+                      1    2   3   4   5   6   7
+                    "{" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "} "
+        },
+        "args": [
+            {
+                "type": "grille",  /* g */
+                "val":"{{" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}} "
+            },
+            {
+                "type": "char", /* pion */
+                "val": "X"
+            }
+             {
+                "type": "int", /* colonne */
+                "val": "3"
+            }
+        ]
+    },
+    {
+        "test_num": 2,
+        "test_label": "colonne mise en paramètre",
+        "file_name": "afficher.c",
+        "goal": {
+            "type": "text",
+            "val":  "entrez une valeur entre 1 et 7 au clavier!"
+                   
+        },
+        "args": [
+            {
+                "type": "grille", /* g */ 
+                "val":"{{" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}} "
+            },
+            {
+                "type": "char", /* pion */
+                "val": "X" 
+            }
+             {
+                "type": "int", /* colonne */
+                "val": "9"
+            }
+        ]
+    },
+    {"test_num": 3,
+        "test_label": "colonne mise en paramètre",
+        "file_name": "afficher.c",
+        "goal": {
+            "type": "string",
+            "val": "entrez une valeur positive voyons!"
+        },
+        "args": [
+            {
+                "type": "grille", /* g */
+                "val":"{{" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}} "
+            },
+            {
+                "type": "char", /* pion */
+                "val": "O" 
+            }
+             {
+                "type": "int", /* colonne */
+                "val": "-3"
+            }
+        ]
+    },
+    {"test_num": 4,
+        "test_label": "colonne mise en paramètre",
+        "file_name": "afficher.c",
+        "goal": {
+            "type": "grille",
+            "val":  
+                               O    
+                               ^ 
+                      1    2   3   4   5   6   7
+                    "{" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "} "
+        },
+        "args": [
+            {
+                "type": "grille",  /* g */
+                "val":"{{" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}} "
+            },
+            {
+                "type": "char", /* pion */
+                "val": "X"
+            }
+             {
+                "type": "int", /* colonne */
+                "val": "3"
+            }
+        ]
+    },
+    {"test_num": 1,
+        "test_label": "evaluation de la grille",
+        "file_name": "grille_pleine.c",
+        "goal": {
+            "type": "bool",
+            "val": "true",
+        },
+        "args": [
+            {
+             "type": "grille" /* g */
+            "val":"{{"X","X","O","X","O","X","O"}
+                    {"X","O","X","X","X","O","X"}
+                    {"O","O","X","O","X","X","O"}
+                    {"X","O","X","O","O","X","O"}
+                    {"X","O","O","O","X","O","O"}
+                    {"O","X","X","X","O","X","X"}} "
+            },
+        ]
+    },
+    {"test_num": 2,
+        "test_label": "evaluation de la grille",
+        "file_name": "grille_pleine.c",
+        "goal": {
+            "type": "bool",
+            "val": "false",
+        },
+        "args": [
+            {
+             "type": "grille", /* g */
+            "val":"{{" "," "," "," "," ","X","O"}
+                    {"X"," "," "," "," ","O","X"}
+                    {"O","O","X"," "," ","X","O"}
+                    {"X","O","X","O"," ","X","O"}
+                    {"X","O","O","O","X","O","O"}
+                    {"O","X","X","X","O","X","X"}} "
+            },
+        ]
+    },
+    {"test_num": 3,
+        "test_label": "evaluation de la grille",
+        "file_name": "grille_pleine.c",
+        "goal": {
+            "type": "bool",
+            "val": "false",
+        },
+        "args": [
+            {
+            "type": "grille", /* g */
+            "val":"{{" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}} "
+            },
+        ]
+    },
+    {"test_num": 4,
+        "test_label": "evaluation de la grille",
+        "file_name": "grille_pleine.c",
+        "goal": {
+            "type": "string",
+            "val": "grille au format 6 par 7 attendue en paramètres",
+        },
+        "args": [
+            {
+             "type": "grille" /* g */
+            "val":"{{"X","X","O","X"}
+                    {"X","O","X","X"}
+                    {"O","O","X","O"}
+                    {"X","O","X","O"}
+                    {"X","O","O","O"}
+                    {"O","X","X","X"}} "
+            },
+        ]
+    },
+    {"test_num": 1,
+        "test_label": "localisation d'une pièce après choisir colonne en col 4",
+        "file_name": "jouer.c",
+        "goal": {
+            "type": "int", /* ligne */
+            "val": "4",
+        },
+        {
+            "type": "int", /* colonne */
+            "val": "3",
+        },
+        "args": [
+            {
+            "type": "grille", /*g */
+            "val":"{{" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," ","X","O"," "," "," "}
+                    {" ","O","X","O"," "," "," "}} "
+            },
+            {
+                "type": "char", /* pion */
+                "val": "X",
+            },
+            {
+                "type": "int", /* colonne */
+                "val": "4",
+            },
+            {
+                "type": "int",  /* ligne */
+                "val": "non def",
+            },
+        ]
+    },
+    {"test_num": 2,
+        "test_label": "localisation d'une pièce après choisir colonne en col 4",
+        "file_name": "jouer.c",
+        "goal": {
+            "type": "string",
+            "val": "colonne choisi incorrect, veuillez choisir une colonne entre 1 et 7",
+        },
+        "args": [
+            {
+            "type": "grille", /* g */
+            "val":"{{" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," ","X","O"," "," "," "}
+                    {" ","O","X","O"," "," "," "}} "
+            },
+            {
+                "type": "char", /* pion */
+                "val": "X",
+            },
+            {
+                "type": "int", /* colonne */
+                "val": "4",
+            },
+            {
+                "type": "int", /* ligne */
+                "val": "non def",
+        },
+        ]
+    },
+    {"test_num": 3,
+        "test_label": "localisation d'une pièce après choisir colonne en col 2",
+        "file_name": "jouer.c",
+        "goal": {
+            "type": "string",
+            "val": "colonne choisi incorrect, veuillez choisir une colonne vide!",
+        },
+        "args": [
+            {
+            "type": "grille", /* g */
+            "val":"{{" ","O"," "," "," "," "," "}
+                    {" ","O"," "," "," "," "," "}
+                    {" ","O"," "," "," "," "," "}
+                    {" ","X"," "," "," "," "," "}
+                    {" ","X","X","O"," "," "," "}
+                    {" ","O","X","O"," "," "," "}} "
+            },
+            {
+                "type": "char", /* pion */
+                "val": "X",
+            },
+            {
+                "type": "int", /* colonne */
+                "val": "2",
+            },
+            {
+                "type": "int", /* ligne */
+                "val": "non def",
+        },
+        ]
+    },
+    {"test_num": 1,
+        "test_label": "je joueur essaye de bouger son pion vers la droite alors qu'il est en colonne une",
+        "file_name": "choisir_colonne.c",
+        "goal": {
+            "type": "string",
+            "val": "veuilllez jouer vers la  droite ou valider votre colonne!",
+        },
+        "args": [
+            {
+            "type": "grille", /* g */
+            "val":"{{" "," "," "," "," "," "," "}
+                    {" ","O"," "," "," "," "," "}
+                    {" ","O"," "," "," "," "," "}
+                    {" ","X"," "," "," "," "," "}
+                    {" ","X","X","O"," "," "," "}
+                    {" ","O","X","O"," "," "," "}} "
+            },
+            {
+                "type": "char", /* pion */
+                "val": "X",
+            },
+            {
+                "type": "int", /*colonne */
+                "val": "1",
+            },
+
+        ]
+    },
+    {"test_num": 2,
+        "test_label": "je joueur essaye de bouger son pion vers la droite mais le pion est en colonne 7",
+        "file_name": "choisir_colonne.c",
+        "goal": {
+            "type": "string",
+            "val": "veuilllez jouer vers la gauche ou valider votre colonne!",
+        },
+        "args": [
+            {
+            "type": "grille", /* g */
+            "val":"{{" "," "," "," "," "," "," "}
+                    {" ","O"," "," "," "," "," "}
+                    {" ","O"," "," "," "," "," "}
+                    {" ","X"," "," "," "," "," "}
+                    {" ","X","X","O"," "," "," "}
+                    {" ","O","X","O"," "," "," "}} "
+            },
+            {
+                "type": "char", /* pion */
+                "val": "X",
+            },
+            {
+                "type": "int", /* colonne */
+                "val": "7",
+            },
+
+        ]
+    },
+    {"test_num": 3,
+        "test_label": "je joueur bouge son pion vers la droite depuis la colonne 5",
+        "file_name": "choisir_colonne.c",
+        "goal": {
+            "type": "grille",
+            "val":                         x    
+                                           ^ 
+                      1    2   3   4   5   6   7
+                   "{" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "} "
+            {
+                "type: int", /* colonne_final */
+                "val: 6 ",
+            }
+        },
+        "args": [
+            {
+            "type": "grille", /* g */
+            "val":"{{" "," "," "," "," "," "," "}
+                    {" ","O"," "," "," "," "," "}
+                    {" ","O"," "," "," "," "," "}
+                    {" ","X"," "," "," "," "," "}
+                    {" ","X","X","O"," "," "," "}
+                    {" ","O","X","O"," "," "," "}} "
+            },
+            {
+                "type": "char", /* pion */
+                "val": "X",
+            },
+            {
+                "type": "int", /* colonne */
+                "val": "5",
+            },
+
+        ]
+    },
+    {"test_num": 4,
+        "test_label": "je joueur valide direcement son pion en colonne 5",
+        "file_name": "choisir_colonne.c",
+        "goal": {
+            "type": "grille",
+            "val":                     x    
+                                       ^ 
+                      1    2   3   4   5   6   7
+                   "{" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "}
+                    {" "," "," "," "," "," "," "} "
+            {
+                "type: int", /* colonne_final */
+                "val: 5 ",
+            }
+        },
+        "args": [
+            {
+            "type": "grille", /* g */
+            "val":"{{" "," "," "," "," "," "," "}
+                    {" ","O"," "," "," "," "," "}
+                    {" ","O"," "," "," "," "," "}
+                    {" ","X"," "," "," "," "," "}
+                    {" ","X","X","O"," "," "," "}
+                    {" ","O","X","O"," "," "," "}} "
+            },
+            {
+                "type": "char", /* pion */
+                "val": "X",
+            },
+            {
+                "type": "int", /* colonne */
+                "val": "5",
+            },
+
+        ]
+    },
+    {"test_num": 1,
+        "test_label": "le joueur veut jouer en colonne deux mais elle est pleine",
+        "file_name": "trouverligne.c",
+        "goal": {
+            {
+                "type: int", /* ligne_trouve */
+                "val: -1 ",
+            }
+        },
+        "args": [
+            {
+            "type": "grille", /* g */
+            "val":"{{" ","X"," "," "," "," "," "}
+                    {" ","O"," "," "," "," "," "}
+                    {" ","O"," "," "," "," "," "}
+                    {" ","X"," "," "," "," "," "}
+                    {" ","X","X","O"," "," "," "}
+                    {" ","O","X","O"," "," "," "}} "
+            },
+            {
+                "type": "int", /* colonne */
+                "val": "2",
+            },
+        ]
+    },
+     {"test_num": 2,
+        "test_label": "le joueur veut jouer en colonne neuf mais elle n'existe pas",
+        "file_name": "trouverligne.c",
+        "goal": {
+            {
+                "type: string",
+                "val: veuillez jouer dans une colonne existante",
+            }
+        },
+        "args": [
+            {
+            "type": "grille", /* g */
+            "val":"{{" "," "," "," "," "," "," "}
+                    {" ","O"," "," "," "," "," "}
+                    {" ","O"," "," "," "," "," "}
+                    {" ","X"," "," "," "," "," "}
+                    {" ","X"," "," "," "," "," "}
+                    {" ","O","X","O"," "," "," "}} "
+            },
+            {
+                "type": "int", /* colonne */
+                "val": "9",
+            },
+        ]
+    },
+     {"test_num": 3,
+        "test_label": "le joueur veut jouer en colonne 5 non pleine descente de la pièce normale",
+        "file_name": "trouverligne.c",
+        "goal": {
+            {
+                "type: int", /* ligne_trouve */
+                "val: 3 ",
+            }
+        },
+        "args": [
+            {
+            "type": "grille", /* tableau */
+            "val":"{{" ","X"," "," "," "," "," "}
+                    {" ","O"," "," "," "," "," "}
+                    {" ","O"," "," "," "," "," "}
+                    {" ","X"," "," "," "," "," "}
+                    {" ","X","X","O","O"," "," "}
+                    {" ","O","X","O","X"," "," "}} "
+            },
+            {
+                "type": "int", /* colonne */
+                "val": "2",
+            },
+        ]
+    },
+     {"test_num": 1,
+        "test_label": "detecte si il y a une combinaison gagnante depuis la case tableau[3][5] , CAS d'une colonne gagnante",
+        "file_name": "estVainqueur.c",
+        "goal": {
+            {
+                "type: bool", /* victoire */
+                "val: true ",
+            }
+        },
+        "args": [
+            {
+            "type": "grille", /* g */
+            "val":"{{" ","X"," "," "," "," "," "}
+                    {" ","O"," "," "," "," "," "}
+                    {" ","O"," ","O"," "," "," "}
+                    {" ","X"," ","O"," "," "," "}
+                    {" ","X","X","O"," "," "," "}
+                    {" ","O","X","O"," "," "," "}} "
+            },
+            {
+                "type": "int", /* ligne */
+                "val": "3",
+            },
+             {
+                "type": "int", /* colonne */
+                "val": "5",
+            },
+        ]
+    },
+         {"test_num": 2,
+        "test_label": "detecte si il y a une combinaison gagnante depuis la case tableau[1][5], CAS d'une diagonale gagnante",
+        "file_name": "estVainqueur.c",
+        "goal": {
+            {
+                "type: bool", /* victoire */
+                "val: true ",
+            }
+        },
+        "args": [
+            {
+            "type": "grille", /* g*/
+            "val":"{{" ","X"," "," "," "," "," "}
+                    {" ","O"," "," "," "," "," "}
+                    {" ","O"," ","O","X"," "," "}
+                    {" ","X"," ","X","X"," "," "}
+                    {" ","X","X","O","O"," "," "}
+                    {" ","X","X","O","O"," "," "}} "
+            },
+            {
+                "type": "int", /* ligne */
+                "val": "1",
+            },
+             {
+                "type": "int", /* colonne */
+                "val": "5",
+            },
+        ]
+    },
+        {"test_num": 3,
+        "test_label": "detecte s'il y a une combinaison gagnante depuis la case tableau[4][5] ",
+        "file_name": "estVainqueur.c",
+        "goal": {
+            {
+                "type: bool", /* victoire */
+                "val: false ",
+            }
+        },
+        "args": [
+            {
+            "type": "grille", /* g */
+            "val":"{{" ","X"," "," "," "," "," "}
+                    {" ","O"," "," "," "," "," "}
+                    {" ","O","O","O"," "," "," "}
+                    {" ","X","X","X"," "," "," "}
+                    {" ","X","X","O"," "," "," "}
+                    {" ","O","X","O","O","O"," "}} "
+            },
+            {
+                "type": "int", /* ligne */
+                "val": "3",
+            },
+             {
+                "type": "int", /* colonne */
+                "val": "5",
+            },
+        ]
+    },
+         {"test_num": 4,
+        "test_label": "tentative de détection dans une case hors des dimensions du tableau",
+        "file_name": "estVainqueur.c",
+        "goal": {
+            {
+                "type: string",
+                "val: erreur case inexistante ! ",
+            }
+        },
+        "args": [
+            {
+            "type": "grille",  /* g */
+            "val":"{{" ","X"," "," "," "," "," "}
+                    {" ","O"," "," "," "," "," "}
+                    {" ","O"," ","O"," "," "," "}
+                    {" ","X"," ","O"," "," "," "}
+                    {" ","X","X","O"," "," "," "}
+                    {" ","O","X","O"," "," "," "}} "
+            },
+            {
+                "type": "int", /* ligne */
+                "val": "3",
+            },
+             {
+                "type": "int", /* colonne */
+                "val": "9",
+            },
+        ]
+    },
+         {"test_num": 5,
+        "test_label": "detecte si il y a une combinaison gagnante depuis la case tableau[4][1], CAS d'une ligne gagnante",
+        "file_name": "estVainqueur.c",
+        "goal": {
+            {
+                "type: bool", /* victoire */
+                "val: true ",
+            }
+        },
+        "args": [
+            {
+            "type": "grille", /* g */
+            "val":"{{" ","X"," "," "," "," "," "}
+                    {" ","O"," ","O","O","O","O"}
+                    {" ","O"," ","X","X","O","X"}
+                    {" ","X"," ","X","O","X","O"}
+                    {" ","X","X","O","X","X","O"}
+                    {"O","X","O","O","X","O","X"}} "
+            },
+            {
+                "type": "int", /* ligne */
+                "val": "3",
+            },
+             {
+                "type": "int", /* colonne */
+                "val": "5",
+            },
+        ]
+    },
+        {"test_num": 1,
+        "test_label": "affichage du gagnant ",
+        "file_name": "finDePartie.c",
+        "goal": {
+            {
+                "type: string",
+                "val: victoire du joueur A ",
+            }
+        },
+        "args": [
+             {
+                "type": "char", /*pion */
+                "val": "X",
+            },
+        ]
+    },
+
+        {"test_num": 2,
+        "test_label": "affichage du gagnant ",
+        "file_name": "finDePartie.c",
+        "goal": {
+            {
+                "type: string",
+                "val: victoire du joueur B ",
+            }
+        },
+        "args": [
+             {
+                "type": "char", /*pion */
+                "val": "O",
+            },
+        ]
+    },
+
+        {"test_num": 3,
+        "test_label": "affichage du gagnant ",
+        "file_name": "finDePartie.c",
+        "goal": {
+            {
+                "type: string",
+                "val: un imposteur est parmis nous, ce joueur n'est pas en jeux ",
+            }
+        },
+        "args": [
+             {
+                "type": "char", /*pion */
+                "val": "Z",
+            },
+        ]
+    },
+
+        {"test_num": 4,
+        "test_label": "affichage du gagnant ",
+        "file_name": "finDePartie.c",
+        "goal": {
+            {
+                "type: string",
+                "val: Quels joueurs! l'égalité est bien là! ",
+            }
+        },
+        "args": [
+             {
+                "type": "char", /*pion */
+                "val": " ",
+            },
+        ]
+    },
+   
+   
+   
+
+
