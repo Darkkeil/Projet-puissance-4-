@@ -2,7 +2,7 @@
 
 
 
-/* nom des variables en parmètre */
+/* nom des variables en paramètre */
 
 
 [
@@ -32,7 +32,7 @@
         "file_name": "init_grille.c",
         "goal": {
             "type": "string",
-            "val": "probleme de dimensions donnez en paramètre un tableau de dimensions 6 par 7"
+            "val": "problème de dimensions donnez en paramètre un tableau de dimensions 6 par 7"
         },
         "args": [
             {
